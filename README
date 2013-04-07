@@ -25,11 +25,6 @@ $ sudo chmod 755 /usr/bin/siv
 
 **** Help ****
 Usage: /path/to/siv [argument]
-List of arguments,
-	-g > Gentoo Linux Theme
-	-s > Star Wars Theme
-	-v > Darth Vader Theme
-	-t > Star Trek Theme
-	-h > Show Help
 
-Example: /path/to/siv -g
+for help,
+/path/to/siv -h
