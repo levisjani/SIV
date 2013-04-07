@@ -101,6 +101,12 @@ lame_quote_star_trek(){
     QUOTE_DISPLAY="${arr_star_wars[$i]}"
 }
 
+lame_quote_mortal_kombat(){
+    declare -a arr_star_wars=("Vengeance will be mine!" "Finish Him!" "Your soul is mine!" "Fatality." "Every man is responsible for his own destiny." "Let the Mortal Kombat begin." "Flawless victory." "Liu Kang Wins!" "Sonya Wins!" "Scorpion and Sub-Zero. Deadliest of enemies but slaves under my power.")
+    i=$(expr $RANDOM % 10)
+    QUOTE_DISPLAY="${arr_star_wars[$i]}"
+}
+
 # **** display ****
 display_gentoo(){
     echo -e "\\e${c5}                                           ."
@@ -222,6 +228,48 @@ display_vader(){
     echo -e "\\e${c6}> \\e${c3}${QUOTE_DISPLAY}\\e${c0}\n"
 }
 
+display_mortal_kombat(){
+    echo -e "\\e${c1}                                      ueeeee...^\"*@e.                 "
+    echo -e "                               ur d@@@@@@@@@@@@@@Nu \"*Nu                      "
+    echo -e "                             d@@@ \"@@@@@@@FUCK@@@@@@@e.\"@c                   "
+    echo -e "                         u@@c   \"\"   ^\"^**@@@@@@@@@@@@@b.^R:                "
+    echo -e "                       z@@#\"\"\"           \`!?@@@@@@@@@@@@@N.^               "
+    echo -e "                     .@P                   ~!R@@@@@@@@@@@@@b                   "
+    echo -e "                    x@F                 **@b. '\"R).@@@@@@@@@@                 "
+    echo -e "                   J^\"                           #@@@@@@@@@@@@.               "
+    echo -e "                  z@e                      ..      \"**@@@@@@@@@               "
+    echo -e "                 :@P           .        .@@@@@b.    ..  \"  #@@@@              "
+    echo -e "                 @@            L          ^*@@@@b   \"      4@@@@L             "
+    echo -e "                4@@            ^u    .e@@@@e.\"*@@@N.       @@@@@@             "
+    echo -e "                @@E            d@@@@@@@@@@@@@@L \"@@@@@  mu @@@@@@F            "
+    echo -e "                @@&            @@@@@@@@@@@@@@@@N   \"#* * ?@@@@@@@N            "
+    echo -e "                @@F            '@@@@@@@@@@@@@@@@@bec...z@ @@@@@@@@             "
+    echo -e "               '@@F             \`@@@@@@@@@@@@@@@@@@@@@@@@ '@@@@E\"@           "
+    echo -e "                @@                  ^\"\"\"\"\"\"\`       ^\"*@@@& 9@@@@N      "
+    echo -e "                k  u@                                  \"@@. \"@@P r           "
+    echo -e "                4@@@@L                                   \"@. eeeR             "
+    echo -e "                 @@@@@k                                   '@e. .@              "
+    echo -e "                 3@@@@@b                                   '@@@@               "
+    echo -e "                  @@@@@@                                    3@@\"              "
+    echo -e "                   @@@@@  dc                                4@F                "
+    echo -e "                    RF** <@@                                J\"                "
+    echo -e "                     #bue@@@LJ@@@Nc.                        \"                 "
+    echo -e "                      ^@@@@@@@@@@@@@r                                          "
+    echo -e "                        \`\"*@@@@@@@@@                                         "
+    echo -e "\t\\e${c0}"
+    echo -e "\\e${c2}  +---->                          \\e${c6}OS: \\e${c2}${OS}"
+    echo -e "\\e${c2}   \-->                     \\e${c6}Hostname: \\e${c2}${HOST}"
+    echo -e "\\e${c2}    \-->                        \\e${c6}User: \\e${c2}${USER}"
+    echo -e "\\e${c2}     \-->                     \\e${c6}Uptime: \\e${c2}${UPTIME}"
+    echo -e "\\e${c2}      \-->                    \\e${c6}Kernel: \\e${c2}${KERNEL}"
+    echo -e "\\e${c2}       \-->                    \\e${c6}Shell: \\e${c2}${SHELL}"
+    echo -e "\\e${c2}        \-->                     \\e${c6}CPU: \\e${c2}${CPU}"
+    echo -e "\\e${c2}         \-->                    \\e${c6}RAM: \\e${c3}${MEM_DISPLAY}"
+    echo -e "\\e${c2}          +-->                  \\e${c6}Root: \\e${c2}${ROOT_DISPLAY}"
+    echo -e "\\e${c2}           \ "
+    echo -e "\\e${c2}            +----> \\e${c3}${QUOTE_DISPLAY}\\e${c0}\n"
+}
+
 # **** Fuck it ****
 arg=$1
 case $arg in
@@ -245,6 +293,11 @@ case $arg in
             lame_quote_star_trek
             display_star_trek
 	};;
+    -m){
+	    declaration
+            lame_quote_mortal_kombat
+            display_mortal_kombat
+	};;
     -h){
 	    echo -e "SIV : System Information Viewer\n"
 	    echo "Usage: /path/to/siv [argument]"
@@ -253,6 +306,7 @@ case $arg in
 	    echo -e "\t-s >\tStar Wars Theme"
 	    echo -e "\t-v >\tDarth Vader Theme"
 	    echo -e "\t-t >\tStar Trek Theme"
+	    echo -e "\t-m >\tMortal Kombat Theme"
 	    echo -e "\t-h >\tShow Help"
 	    echo "Example: /path/to/siv -g"
 	};;
@@ -264,6 +318,7 @@ case $arg in
 	    echo -e "\t-s >\tStar Wars Theme"
 	    echo -e "\t-v >\tDarth Vader Theme"
 	    echo -e "\t-t >\tStar Trek Theme"
+	    echo -e "\t-m >\tMortal Kombat Theme"
 	    echo -e "\t-h >\tShow Help"
 	    echo "Example: /path/to/siv -g"
 	};;
