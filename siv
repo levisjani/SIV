@@ -29,7 +29,7 @@ declaration(){
     c7='[1;37m' # GRAY
 
     # **** info ****
-    OS='Gentoo Gnu/Linux'
+    OS=$(uname -o)
     HOST=$(hostname)
     USER=$(whoami)
 
