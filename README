@@ -1,0 +1,35 @@
+=>>>>> Lame Decoration <<<<<=
+
+SIV : System Information Viewer
+Author : Saikat Basak
+Repo   :
+
+**** License ****
+The software is distributed under "THE BEER-WARE LICENSE" (Revision 42)
+The Beer-ware license was written by Poul-Henning Kamp. <phk@FreeBSD.ORG>
+----------------------------------------------------------------------------
+"THE BEER-WARE LICENSE" (Revision 42):
+As long as you retain this notice you
+can do whatever you want with this stuff. If we meet some day, and you think
+this stuff is worth it, you can buy me a beer in return.
+----------------------------------------------------------------------------
+
+**** Installation ****
+Download the archive or clone it.
+
+Copy the file to /usr/bin
+$ sudo cp /path/to/siv /usr/bin/
+
+Give permissions
+$ sudo chmod 755 /usr/bin/siv
+
+**** Help ****
+Usage: /path/to/siv [argument]
+List of arguments,
+	-g >\tGentoo Linux Theme
+	-s >\tStar Wars Theme
+	-v >\tDarth Vader Theme
+	-t >\tStar Trek Theme
+	-h >\tShow Help
+
+Example: /path/to/siv -g
