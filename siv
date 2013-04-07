@@ -107,6 +107,12 @@ lame_quote_mortal_kombat(){
     QUOTE_DISPLAY="${arr_star_wars[$i]}"
 }
 
+lame_quote_royal(){
+    declare -a arr_star_wars=("The interpretation of dreams is the royal road to a knowledge of the unconscious activities of the mind." "The royal road to a man's heart is to talk to him about the things he treasures most." "In the past, people were born royal. Nowadays, royalty comes from what you do." "There was a knight came riding by.. In early spring, when the roads were dry." "A true knight is fuller of bravery in the midst, than in the beginning of danger." "I have played a boxer, a cowboy, a knight, a prince, an elf and a pirate. I am so glad to have done all of that already." "Heroism is endurance for one moment more." "The greatest height of heroism to which an individual, like a people, can attain is to know how to face ridicule." "Faith is the heroism of the intellect." "True heroism is remarkably sober, very undramatic.")
+    i=$(expr $RANDOM % 10)
+    QUOTE_DISPLAY="${arr_star_wars[$i]}"
+}
+
 # **** display ****
 display_gentoo(){
     echo -e "\\e${c5}                                           ."
@@ -270,11 +276,53 @@ display_mortal_kombat(){
     echo -e "\\e${c2}            +----> \\e${c3}${QUOTE_DISPLAY}\\e${c0}\n"
 }
 
+display_royal(){
+    echo -e "\t\\e${c3}"
+    echo -e "\t\\e${c3}                                .-."
+    echo -e "\t\\e${c3}                               {{@}}"
+    echo -e "\t\\e${c3}               <>               \\e${c2}8@8"
+    echo -e "\t\\e${c3}             .::::.             \\e${c2}888"
+    echo -e "\t\\e${c3}         @+\/W\/\/W\/+@         \\e${c2}8@8"
+    echo -e "\t\\e${c3}          \+\/^\/^\/+/     _    \\e${c2})8(    \\e${c3}_"
+    echo -e "\t\\e${c3}           \_\\e${c1}O\\e${c3}_<>_\\e${c1}O\\e${c3}_/     (@)\\e${c2}__/8@8\__\\e${c3}(@)"
+    echo -e "\t      \\e${c2}________\\e${c3}____\\e${c5}________ \\e${c3}\`~\"-=\\e${c6})\\e${c2}*\\e${c6}(\\e${c3}=-\"~\`"
+    echo -e "\t     \\e${c2}|\\e${c1}<><><>\\e${c2}<<\\e${c3}|%%|\\e${c5}>>\\e${c1}<><><>\\e${c5}|     \\e${c6}|.|"
+    echo -e "\t     \\e${c2}|\\e${c1}<>\\e${c2}<<<<<<\\e${c3}|%%|\\e${c5}>>>>>>\\e${c1}<>\\e${c5}|     \\e${c6}|R|"
+    echo -e "\t     \\e${c2}|\\e${c1}<>\\e${c2}<<<<<<\\e${c3}|%%|\\e${c5}>>>>>>\\e${c1}<>\\e${c5}|     \\e${c6}|'|"
+    echo -e "\t     \\e${c2}|\\e${c1}<>\\e${c2}<<<\\e${c3}.--------.\\e${c5}>>>\\e${c1}<>\\e${c5}|     \\e${c6}|.|"
+    echo -e "\t     \\e${c2}|<<<<<\\e${c3}|   ()   |\\e${c5}>>>>>\\e${c5}|     \\e${c6}|O|"
+    echo -e "\t     \\e${c2}|<<<<<\\e${c3}| (\\e${c1}O\\e${c3}\/\\e${c1}O\\e${c3}) |\\e${c5}>>>>>\\e${c5}|     \\e${c6}|'|"
+    echo -e "\t\\e${c3}     |%%%%%\   /\   /%%%%%|     \\e${c6}|.|"
+    echo -e "\t\\e${c3}     |%%%%%%\  \/  /%%%%%%|     \\e${c6}|Y|"
+    echo -e "\t\\e${c3}     \\e${c4}|<<<<<<<\\e${c3}'.__.'\\e${c6}>>>>>>>|     \\e${c6}|'|"
+    echo -e "\t     \\e${c4}|<<<<<<<<\\e${c3}|%%|\\e${c6}>>>>>>>>|     \\e${c6}|.|"
+    echo -e "\t     \\e${c4}:<<<<<<<<\\e${c3}|%%|\\e${c6}>>>>>>>>:     \\e${c6}|A|"
+    echo -e "\t      \\e${c4}\ \\e${c1}<>\\e${c4}<<<<\\e${c3}|%%|\\e${c6}>>>>\\e${c1}<> \\e${c6}/      \\e${c6}|'|"
+    echo -e "\t       \\e${c4}\ \\e${c1}<>\\e${c4}<<<\\e${c3}|%%|\\e${c6}>>>\\e${c1}<> \\e${c6}/       \\e${c6}|.|"
+    echo -e "\t        \\e${c4}\ \\e${c1}<>\\e${c4}<<\\e${c3}|%%|\\e${c6}>>\\e${c1}<> \\e${c6}/        \\e${c6}|L|"
+    echo -e "\t         \\e${c4}\`\ \\e${c1}<>\\e${c3}|%%|\\e${c1}<> \\e${c6}/'         \\e${c6}|'|"
+    echo -e "\t           \\e${c4}\`-.\\e${c3}|%%|\\e${c6}.-\`           \\e${c6}\ /"
+    echo -e "\t              \\e${c3}'--'               \\e${c6}^"
+    echo -e "\\e${c0}"
+    echo -e "\\e${c2}  +---->             \\e${c6}OS: \\e${c2}${OS}"
+    echo -e "\\e${c2}   \-->        \\e${c6}Hostname: \\e${c2}${HOST}"
+    echo -e "\\e${c2}    \-->           \\e${c6}User: \\e${c2}${USER}"
+    echo -e "\\e${c2}     \-->        \\e${c6}Uptime: \\e${c2}${UPTIME}"
+    echo -e "\\e${c2}      \-->       \\e${c6}Kernel: \\e${c2}${KERNEL}"
+    echo -e "\\e${c2}       \-->       \\e${c6}Shell: \\e${c2}${SHELL}"
+    echo -e "\\e${c2}        \-->        \\e${c6}CPU: \\e${c2}${CPU}"
+    echo -e "\\e${c2}         \-->       \\e${c6}RAM: \\e${c3}${MEM_DISPLAY}"
+    echo -e "\\e${c2}          +-->     \\e${c6}Root: \\e${c2}${ROOT_DISPLAY}"
+    echo -e "\\e${c2}           \ "
+    echo -e "\\e${c2}            +----> \\e${c3}${QUOTE_DISPLAY}\\e${c0}\n"
+}
+
 # **** Fuck it ****
 arg=$1
 case $arg in
     -g){
 	    declaration
+            OS='Gentoo Gnu/Linux'
 	    lame_quote_gentoo
 	    display_gentoo
 	};;
@@ -298,6 +346,12 @@ case $arg in
             lame_quote_mortal_kombat
             display_mortal_kombat
 	};;
+    -r){
+            declaration
+	    OS='Linux Royal'
+            lame_quote_royal
+            display_royal
+        };;
     -h){
 	    echo -e "SIV : System Information Viewer\n"
 	    echo "Usage: /path/to/siv [argument]"
@@ -307,6 +361,7 @@ case $arg in
 	    echo -e "\t-v >\tDarth Vader Theme"
 	    echo -e "\t-t >\tStar Trek Theme"
 	    echo -e "\t-m >\tMortal Kombat Theme"
+	    echo -e "\t-r >\tLinux Royal Theme"
 	    echo -e "\t-h >\tShow Help"
 	    echo "Example: /path/to/siv -g"
 	};;
@@ -319,6 +374,7 @@ case $arg in
 	    echo -e "\t-v >\tDarth Vader Theme"
 	    echo -e "\t-t >\tStar Trek Theme"
 	    echo -e "\t-m >\tMortal Kombat Theme"
+	    echo -e "\t-r >\tLinux Royal Theme"
 	    echo -e "\t-h >\tShow Help"
 	    echo "Example: /path/to/siv -g"
 	};;
