@@ -70,9 +70,9 @@ declaration(){
     TOTALMEM="$(($MEMTOTAL / 1024))"
     MEM_DISPLAY="$USEDMEM / $TOTALMEM MB"
 
-    ROOT_USED=$(df -h | grep "rootfs" | cut -d' ' -f14)
-    ROOT_TOT=$(df -h | grep "rootfs" | cut -d' ' -f12)
-    ROOT_PER=$(df -h | grep "rootfs" | cut -d' ' -f19)
+    ROOT_USED=$(df -h | grep "rootfs" | awk -v OFS=" " '$1=$1' | cut -d' ' -f3)
+    ROOT_TOT=$(df -h | grep "rootfs" | awk -v OFS=" " '$1=$1' | cut -d' ' -f2)
+    ROOT_PER=$(df -h | grep "rootfs" | awk -v OFS=" " '$1=$1' | cut -d' ' -f5)
     ROOT_DISPLAY="$ROOT_USED / $ROOT_TOT ($ROOT_PER)"
 }
 
